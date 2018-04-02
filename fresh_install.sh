@@ -1,10 +1,10 @@
 #!/bin/bash
 echo "Updating sources"
+echo "Wait please...."
 apt-get update > /dev/null
 sudo rm -rf /var/lib/apt/lists/* > /dev/null
 apt-get update > /dev/null
 apt-get upgrade -y --force-yes > /dev/null
-echo "Wait please...."
 echo "Done"
 echo "Installing FOS Prerequisites..."
 apt-get install php5-cli php5-curl curl zip unzip sudo nano dialog apt-utils python-software-properties apt lsb-release -y > /dev/null
