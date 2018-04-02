@@ -290,8 +290,7 @@ if (isset($_GET['update'])) {
     });
 
     echo "Database Installed OK" . PHP_EOL;
-}
-
+    
     echo "********************************************************************************************" . PHP_EOL;
     echo "Your panel is installed !!!" . PHP_EOL;
     echo "Login page: http://$ip:8000" . PHP_EOL;
@@ -300,3 +299,4 @@ if (isset($_GET['update'])) {
     echo "Password: admin" . PHP_EOL;
     echo "IMPORTANT: After you logged in, go to settings and check your ip-address." . PHP_EOL;
     echo "********************************************************************************************" . PHP_EOL;
+}
