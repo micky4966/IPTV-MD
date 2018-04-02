@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Se Instaleaza FFmpeg"
+echo "Install FFmpeg"
 wget http://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz
 /bin/mkdir /usr/src/ffmpeg
 tar -xJf ffmpeg-release-64bit-static.tar.xz -C /usr/src/ffmpeg
