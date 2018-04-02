@@ -297,6 +297,6 @@ if (isset($_GET['update'])) {
     echo "With:" . PHP_EOL;
     echo "Username: admin" . PHP_EOL;
     echo "Password: admin" . PHP_EOL;
-    echo "IMPORTANT: After you logged in, go to settings and check your ip-address." . PHP_EOL;
+    echo "IMPORTANT: After you logged in, go to Admin and change password." . PHP_EOL;
     echo "********************************************************************************************" . PHP_EOL;
 }
