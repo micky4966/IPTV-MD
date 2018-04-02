@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Welcome";
+echo "I install the new IPTV panel on your server";
 echo "Updating sources"
 echo "Wait please...."
 apt-get update > /dev/null
