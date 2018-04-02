@@ -271,10 +271,20 @@ if (isset($_GET['update'])) {
         $db->schema()->hasColumn('settings', 'user_agent') ? '' : $table->string('user_agent')->default('FOS-Streaming');
     });
 
+    function GetIP() {
+    $ip_address = explode("\n", shell_exec("/sbin/ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'"));
+    foreach ($ip_address as $addr) {
+        if (strncmp("127", $addr, 3) !== 0) {
+            $result = $addr;
+            break;
+        }
+    }
+    return $result;
+}
     echo "update done" . PHP_EOL;
     echo "********************************************************************************************" . PHP_EOL;
     echo "Your panel is installed !!!" . PHP_EOL;
-    echo "Login page: http://.$addr.:8000 " . PHP_EOL;
+    echo "Login page: http://". PHP_EOL; .$addr. echo ":8000 " . PHP_EOL;
     echo "With:" . PHP_EOL;
     echo "Username: admin" . PHP_EOL;
     echo "Password: admin" . PHP_EOL;
