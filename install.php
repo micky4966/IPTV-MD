@@ -3,7 +3,7 @@
 include('config.php');
 // TODO: version control
 // TODO: update tables
-$ip_address = explode("\n", shell_exec("/sbin/ifconfig | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'"));
+$ip_address = $_SERVER['SERVER_ADDR'];
 $db = $databasemanagar;
 if (isset($_GET['install'])) {
 
