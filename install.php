@@ -272,12 +272,12 @@ if (isset($_GET['update'])) {
     });
 
     echo "update done" . PHP_EOL;
-    echo "******************************************************************************************** \n" . PHP_EOL;
-    echo "Your panel is installed!!! \n" . PHP_EOL;
-    echo "Login page: 'http://{$srv_ip}:8000' \n" . PHP_EOL;
-    echo "With: \n" . PHP_EOL;
-    echo "Username: admin \n" . PHP_EOL;
-    echo "Password: admin \n" . PHP_EOL;
-    echo "IMPORTANT: After you logged in, go to settings and check your ip-address. \n" . PHP_EOL;
-    echo "******************************************************************************************** \n" . PHP_EOL;
+    echo "********************************************************************************************" . PHP_EOL;
+    echo "Your panel is installed!!!" . PHP_EOL;
+    echo "Login page: 'http://{$srv_ip}:8000'" . PHP_EOL;
+    echo "With:" . PHP_EOL;
+    echo "Username: admin" . PHP_EOL;
+    echo "Password: admin" . PHP_EOL;
+    echo "IMPORTANT: After you logged in, go to settings and check your ip-address." . PHP_EOL;
+    echo "********************************************************************************************" . PHP_EOL;
 }
