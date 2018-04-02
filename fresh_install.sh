@@ -8,22 +8,21 @@ echo "Done"
 echo "Installing FOS Prerequisites..."
 apt-get install php5-cli php5-curl curl zip unzip sudo nano dialog apt-utils python-software-properties apt lsb-release -y > /dev/null
 echo "Done"
-
 chmod 777 /tmp > /dev/null
 rm -rf ~/bin  > /dev/null
 rm -rf ~/ffmpeg*  > /dev/null
 cd /tmp > /dev/null
 rm -rf /tmp/* > /dev/null
-echo "FOS-Streaming -> Database Deployment"
+echo "FOS-Streaming V2 -> Install Database "
 wget -q https://raw.githubusercontent.com/micky4966/IPTV-MD/master/db_install.sh -O db_install.sh > /dev/null 
 chmod 755 db_install.sh > /dev/null
 ./db_install.sh
 if [ ! -f /usr/bin/ffmpeg ]; then
-echo "FOS-Streaming -> FFmpeg and FFprobe installation"
+echo "FOS-Streaming V2 -> Install FFmpeg and FFprobe"
 wget -q https://raw.githubusercontent.com/micky4966/IPTV-MD/master/ffmpeg.sh -O ffmpeg.sh > /dev/null
 chmod 755 ffmpeg.sh > /dev/null
 ./ffmpeg.sh
-echo "FOS-Streaming -> Web Platform"
+echo "FOS-Streaming V2 -> Install Web Platform"
 wget -q https://raw.githubusercontent.com/micky4966/IPTV-MD/master/install_panel.php -O install_panel.php > /dev/null
 /usr/bin/php install_panel.php
 fi
