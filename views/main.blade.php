@@ -133,7 +133,7 @@
             <!-- footer content -->
             <footer>
                 <div class="">
-                    <p class="pull-right">IPTV-MD by <a href="http://www.youtube.com" target="_new">Ionel</a>
+                    <p class="pull-right">IPTV-MD by <a href="http://www.google.com" target="_new">micky</a>
 
                     </p>
                 </div>
