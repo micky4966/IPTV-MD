@@ -6,7 +6,7 @@ if (strcmp($we_root, "root") !== 0) {
     exit;
 }
 
-echo "FOS: Checking for existing installations!\r";
+echo "Checking for existing installations!\r";
 shell_exec("killall -9 ffmpeg php5-fpm php-fpm nginx nginx_fos > /dev/null");
 shell_exec("service php5-fpm stop > /dev/null");
 shell_exec("rm -rf /usr/src/FOS-Streaming/* > /dev/null");
@@ -135,22 +135,20 @@ function InstallSources($CodeName) {
 
 $release_info = shell_exec("lsb_release -i -s");
 $arch = shell_exec("uname -m");
-echo "Welcome \n";
-echo "FOS-Streaming will be installed on your system \n";
 echo "Please don't close this session until it's finished \n \n";
-echo "1. [Distribution Detection:] ";
+echo "1. [Distribution Detection:] \n";
 echo " [############";
 
 if (strcmp($release_info, "Ubuntu") || strcmp($release_info, "Debian")) {
-    echo "]PASS \n";
+    echo "] OK \n";
     $CodeName = trim(strtolower(shell_exec('lsb_release -c -s')));
     if (!file_exists("/etc/apt/sources.list.d/fos_streaming.list")) {
         InstallSources($CodeName);
     }
-    echo "Updating newly added sources, please hold...";
+    echo "2. [Updating newly added sources, please wait...]\n";
     shell_exec("apt-get update > /dev/null");
 } else {
-    echo "]FAIL. Need Ubuntu or Debian!!! \n";
+    echo "] FAIL. Need Ubuntu or Debian!!! \n";
     exit();
 }
 
@@ -165,7 +163,7 @@ if (!file_exists("/usr/src/FOS-Streaming")) {
 }
 
 
-echo "##";
+echo "##\n";
 
 function GetFos() {
     shell_exec("rm -rf /usr/src/FOS-Streaming/*");
@@ -249,7 +247,7 @@ function GetIP() {
     return $result;
 }
 
-echo "3. [Installing needed files:]";
+echo "3. [Installing Packages:]\n";
 echo " [#";
 $packages = [
     "libxml2-dev",
@@ -375,10 +373,10 @@ foreach ($packages as $package) {
         $pak_inst = 0;
     }
 }
-echo "]PASS \n";
+echo "] OK \n";
 
 
-echo "4. [FOS-Panel Installation:] ";
+echo "4. [Download Panel :] \n";
 echo " [#";
 
 $srv_ip = GetIP();
@@ -395,4 +393,4 @@ echo "##";
 echo "#";
 shell_exec("chown fosstreaming:fosstreaming /home/fos-streaming/fos/nginx/html");
 echo "#";
-echo "]PASS \n";
+echo "] OK \n";
