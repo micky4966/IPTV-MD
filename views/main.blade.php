@@ -48,7 +48,7 @@
             <div class="left_col scroll-view">
 
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.php" class="site_title"> <span><span>IPTV-MD <small style="font-size: 10px;">Moldova</small></span></span></a>
+                    <a href="index.php" class="site_title"> <span><span>IPTV-MD <small style="font-size: 10px;">Streaming</small></span></span></a>
                 </div>
                 <div class="clearfix"></div>
 
