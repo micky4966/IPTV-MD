@@ -272,4 +272,12 @@ if (isset($_GET['update'])) {
     });
 
     echo "update done" . PHP_EOL;
+    echo "******************************************************************************************** \n" . PHP_EOL;
+    echo "FOS-Streaming installed.. \n" . PHP_EOL;
+    echo "visit management page: 'http://{$srv_ip}:8000' \n" . PHP_EOL;
+    echo "Login: \n" . PHP_EOL;
+    echo "Username: admin \n" . PHP_EOL;
+    echo "Password: admin \n" . PHP_EOL;
+    echo "IMPORTANT: After you logged in, go to settings and check your ip-address. \n" . PHP_EOL;
+    echo "******************************************************************************************** \n" . PHP_EOL;
 }
