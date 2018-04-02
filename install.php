@@ -274,7 +274,7 @@ if (isset($_GET['update'])) {
     echo "update done" . PHP_EOL;
     echo "********************************************************************************************" . PHP_EOL;
     echo "Your panel is installed !!!" . PHP_EOL;
-    echo "Login page: http://{$srv_ip}:8000 " . PHP_EOL;
+    echo "Login page: http://.$addr.:8000 " . PHP_EOL;
     echo "With:" . PHP_EOL;
     echo "Username: admin" . PHP_EOL;
     echo "Password: admin" . PHP_EOL;
