@@ -99,8 +99,11 @@ if (isset($_POST['submit'])) {
                                 <div>
 
 
-                                    <p>&copy;2016 All Rights Reserved IPTV-MD by <a href="http://www.youtube.com"
-                                                                                          target="_blank">EU</a></p>
+                                    <p>&copy; <?php 
+                                       $fromYear = 2015; 
+                                       $thisYear = (int)date('Y'); 
+                                       echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : '');?> All Rights Reserved IPTV-MD by <a href="http://www.google.com"
+                                                                                          target="_blank">micky</a></p>
                                 </div>
                             </div>
                         </form>
