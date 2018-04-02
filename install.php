@@ -48,8 +48,8 @@ if (isset($_GET['install'])) {
         $admin->password = md5('admin');
         $admin->save();
 
-        echo "created admin table " . PHP_EOL;
-        echo "admin created: username: admin  and password: admin " . PHP_EOL;
+        echo "Created admin table" . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
 
@@ -66,7 +66,8 @@ if (isset($_GET['install'])) {
         $category->name = 'Default';
         $category->save();
 
-        echo "created categories table " . PHP_EOL;
+        echo "Created categories table " . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
 
@@ -79,7 +80,8 @@ if (isset($_GET['install'])) {
             $table->timestamps();
         });
 
-        echo "created category_user table " . PHP_EOL;
+        echo "Created category_user table " . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
 
@@ -97,7 +99,8 @@ if (isset($_GET['install'])) {
             $table->timestamps();
         });
 
-        echo "created settings table " . PHP_EOL;
+        echo "Created settings table " . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
 
@@ -121,7 +124,8 @@ if (isset($_GET['install'])) {
             $table->tinyInteger('checker')->default(0);
             $table->timestamps();
         });
-        echo "created streams table " . PHP_EOL;
+        echo "Created streams table " . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
     if (!in_array('users', $arraynamesexist)) {
@@ -139,7 +143,8 @@ if (isset($_GET['install'])) {
             $table->timestamps();
         });
 
-        echo "created users table " . PHP_EOL;
+        echo "Created users table " . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
 
@@ -171,7 +176,8 @@ if (isset($_GET['install'])) {
             $table->timestamps();
         });
 
-        echo "created transcodes table" . PHP_EOL;
+        echo "Created transcodes table" . PHP_EOL;
+        echo "....." . PHP_EOL;
 
         $profile1 = new Transcode();
         $profile1->name = 'Default 1: Copy, Copy';
@@ -180,7 +186,9 @@ if (isset($_GET['install'])) {
         $profile1->video_codec = 'copy';
         $profile1->audio_codec = 'copy';
         $profile1->save();
-        echo "created transcode profile1 data" . PHP_EOL;
+        
+        echo "Created transcode profile1 data" . PHP_EOL;
+        echo "....." . PHP_EOL;
 
         $profile2 = new Transcode();
         $profile2->name = 'Default 2: H264, AAC';
@@ -189,16 +197,20 @@ if (isset($_GET['install'])) {
         $profile2->video_codec = 'h264';
         $profile2->audio_codec = 'libfaac';
         $profile2->save();
-        echo "created transcode profile2 data" . PHP_EOL;
         
-                $profile3 = new Transcode();
+        echo "Created transcode profile2 data" . PHP_EOL;
+        echo "....." . PHP_EOL;
+        
+        $profile3 = new Transcode();
         $profile2->name = 'Default 2: H265, AAC';
         $profile2->probesize = 12000000;
         $profile2->analyzeduration = 5000000;
         $profile2->video_codec = 'libx265';
         $profile2->audio_codec = 'libfaac';
         $profile2->save();
-        echo "created transcode profile3 data" . PHP_EOL;
+        
+        echo "Created transcode profile3 data" . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
 
@@ -221,7 +233,8 @@ if (isset($_GET['install'])) {
             $table->timestamps();
         });
 
-        echo "created activity table" . PHP_EOL;
+        echo "Created activity table" . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
 
@@ -234,7 +247,8 @@ if (isset($_GET['install'])) {
             $table->timestamps();
         });
 
-        echo "created blocked_ips table" . PHP_EOL;
+        echo "Created blocked_ips table" . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 
     if (!in_array('blocked_user_agents', $arraynamesexist)) {
@@ -246,7 +260,8 @@ if (isset($_GET['install'])) {
             $table->timestamps();
         });
 
-        echo "created blocked_user_agents table" . PHP_EOL;
+        echo "Created blocked_user_agents table" . PHP_EOL;
+        echo "....." . PHP_EOL;
     }
 }
 
@@ -274,7 +289,9 @@ if (isset($_GET['update'])) {
         $db->schema()->hasColumn('settings', 'user_agent') ? '' : $table->string('user_agent')->default('FOS-Streaming');
     });
 
-    echo "update done" . PHP_EOL;
+    echo "Database Installed OK" . PHP_EOL;
+}
+
     echo "********************************************************************************************" . PHP_EOL;
     echo "Your panel is installed !!!" . PHP_EOL;
     echo "Login page: http://$ip:8000" . PHP_EOL;
@@ -283,4 +300,3 @@ if (isset($_GET['update'])) {
     echo "Password: admin" . PHP_EOL;
     echo "IMPORTANT: After you logged in, go to settings and check your ip-address." . PHP_EOL;
     echo "********************************************************************************************" . PHP_EOL;
-}
