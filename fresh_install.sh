@@ -6,7 +6,7 @@ sudo rm -rf /var/lib/apt/lists/* > /dev/null
 apt-get update > /dev/null
 apt-get upgrade -y --force-yes > /dev/null
 echo "Done"
-echo "Installing FOS Prerequisites..."
+echo "Installing Prerequisites..."
 apt-get install php5-cli php5-curl curl zip unzip sudo nano dialog apt-utils python-software-properties apt lsb-release -y > /dev/null
 echo "Done"
 chmod 777 /tmp > /dev/null
