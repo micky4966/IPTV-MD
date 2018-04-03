@@ -25,7 +25,7 @@ mysql -uroot -p$sqlpasswd -e "CREATE DATABASE $sqldatabase"
 mysql -uroot -p$sqlpasswd -e "grant all privileges on $sqldatabase.* to '$sqluname'@'localhost' identified by '$sqlpasswd'"
 
 echo  "hostname: localhost, database_name: " $sqldatabase " , database_username: "  $sqluname  " , database_password " $sqlpasswd
-echo "\n "
+echo "OK"
 
 sed -i 's/xxx/'$sqldatabase'/g' /home/fos-streaming/fos/www/config.php  
 sed -i 's/zzz/'$sqlpasswd'/g' /home/fos-streaming/fos/www/config.php 
