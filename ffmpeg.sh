@@ -9,11 +9,11 @@ tar -xJf ffmpeg-release-64bit-static.tar.xz -C /usr/src/ffmpeg
 chmod 755 /usr/bin/ffmpeg
 chmod 755 /usr/bin/ffprobe
 
-echo "******************************************************************************************** \n";
-echo "Your panel is installed !!!\n";
-echo "Login page: 'http://{$srv_ip}:8000' \n";
-echo "With: \n";
-echo "Username: admin \n";
-echo "Password: admin \n";
-echo "IMPORTANT: After you logged in, go to Admin and change password. \n";
-echo "******************************************************************************************** \n";
+echo "******************************************************************************************** \n"
+echo "Your panel is installed !!!\n"
+echo "Login page: 'http://{$srv_ip}:8000' \n"
+echo "With: \n"
+echo "Username: admin \n"
+echo "Password: admin \n"
+echo "IMPORTANT: After you logged in, go to Admin and change password. \n"
+echo "******************************************************************************************** \n"
